@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-const cors = require("cors");
 
 const pool = mysql.createPool({
     connectionLimit: 10,
@@ -18,7 +17,6 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME
 });
 
-app(cors())
 // Connect to MySQL
 // db.connect((err) => {
 //   if (err) {
